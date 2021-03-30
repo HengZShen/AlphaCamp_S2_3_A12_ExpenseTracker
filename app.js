@@ -27,11 +27,9 @@ require('./configs/mongoose')
 
 
 
-app.get('/', (req, res) => {
-  res.render('index')
-})
-
-
+// routes
+const routes = require('./routes')
+app.use(routes)
 
 
 
