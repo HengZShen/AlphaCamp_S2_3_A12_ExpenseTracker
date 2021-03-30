@@ -21,20 +21,13 @@ app.use(bodyParser.urlencoded({ extended: true }))
 const methodOverride = require('method-override')
 app.use(methodOverride('_method'))
 
-
 // mongodb connection
 require('./configs/mongoose')
 
 
-
-app.get('/', (req, res) => {
-  res.render('index')
-})
-
-
-
-
-
+// routes
+const routes = require('./routes')
+app.use(routes)
 
 
 
