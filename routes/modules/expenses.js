@@ -39,4 +39,13 @@ router.put('/:id', (req, res) => {
 })
 
 
+//delete 
+router.delete("/:id", (req, res) => {
+  Expense.findById(req.params.id)
+    .then(expense => expense.deleteOne())
+    .then(() => res.redirect('/'))
+    .catch(error => console.log(error))
+})
+
+
 module.exports = router
