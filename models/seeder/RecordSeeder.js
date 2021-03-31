@@ -9,8 +9,8 @@ const Record = require('../Record')
 db.once('open', () => {
   console.log('mongodb connected!')
 
-  sample.forEach(({ name, cost, category, description }) => {
-    Record.create({ name, cost, category, description })
+  sample.forEach(({ name, cost, date, category }) => {
+    Record.create({ name, cost, date, category })
   })
   console.log('seed data created')
 })

@@ -1,0 +1,24 @@
+.form-container, .expense-container {
+  background-color: #a2a8aa;
+  box-shadow:0px 0px 5px 0 rgb(128, 126, 126);
+  border-radius:5px;
+  width: fit-content  !important;
+  padding: 1em;
+  margin-right:auto;
+  margin-left:auto;
+}
+
+.form-description, .input-group {
+  min-width:400px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.new-title, .input-group {
+  font-size:22px;
+
+}
+
+.input-group input, .input-group select {
+  min-width:200px  !important;
+}

@@ -8,7 +8,12 @@ const Expense = require('../../models/Record')
 
 
 router.get('/', (req, res) => {
-  res.render('index')
+
+  Expense.find()
+    .lean()
+    .then(expenses => res.render('index', { expenses }))
+    .catch(error => console.log(error))
+
 })
 
 

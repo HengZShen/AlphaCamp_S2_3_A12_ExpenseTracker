@@ -1,0 +1,37 @@
+<div class="form-container">
+  <form action="/expenses" method="POST">
+    <div class="form-description">
+      <span>*必填欄位</span>
+      <span class="new-title">請修改你的支出</span>
+    </div>
+    <div class="input-group mt-5 mb-5">
+      <label for="name">名稱* :</label>
+      <input type="text" id="name" name="name" value="{{expense.name}}">
+    </div>
+    <div class="input-group mt-5 mb-5">
+      <label for="date">日期* :</label>
+      <input type="date" id="date" name="date" value="{{expense.date}}">
+    </div>
+    <div class="input-group mt-5 mb-5">
+      <label for="category">列別* :</label>
+      <select name="category" id="category">
+        <option value="none" selected disabled hidden>Select</option>
+        <option value="housing" {{#checkSelect expense.category 'housing' }}{{/checkSelect}}>家居物業</option>
+        <option value=" transportation" {{#checkSelect expense.category 'transportation' }}{{/checkSelect}}>
+          交通出行
+        </option>
+        <option value="entertainment" {{#checkSelect expense.category 'entertainment' }}{{/checkSelect}}>
+          休閒娛樂</option>
+        <option value="food" {{#checkSelect expense.category 'food' }}{{/checkSelect}}>餐飲食品</option>
+        <option value="other" {{#checkSelect expense.category 'other' }}{{/checkSelect}}>其他</option>
+      </select>
+    </div>
+    <div class="input-group mt-5 mb-5">
+      <label for="cost">金額* :</label>
+      <input type="number" id="cost" name="cost" value="{{expense.cost}}">
+    </div>
+
+    <button type="submit" class="btn btn-primary">送出</button>
+
+  </form>
+</div>

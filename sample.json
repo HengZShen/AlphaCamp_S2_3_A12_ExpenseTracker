@@ -3,32 +3,32 @@
     {
       "name": "Burger King",
       "cost": "150",
-      "category": "food",
-      "description": "Yummy"
+      "date": "2021-03-01",
+      "category": "food"
     },
     {
       "name": "Spaghetti",
       "cost": "200",
-      "category": "food",
-      "description": "Bad"
+      "date": "2021-03-11",
+      "category": "food"
     },
     {
       "name": "Movie Iron Man",
       "cost": "300",
-      "category": "entertainment",
-      "description": "pretty well"
+      "date": "2021-11-21",
+      "category": "entertainment"
     },
     {
       "name": "T-shirt",
       "cost": "500",
-      "category": "clothing",
-      "description": "Good"
+      "date": "2021-02-09",
+      "category": "other"
     },
     {
       "name": "rent",
       "cost": "7000",
-      "category": "housing",
-      "description": "Omg"
+      "date": "2021/3/1",
+      "category": "housing"
     }
   ]
 }

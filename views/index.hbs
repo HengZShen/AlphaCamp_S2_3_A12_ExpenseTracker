@@ -1,1 +1,35 @@
-<h1>Test</h1>
+<div class="expense-container">
+
+  <div class="category-selector">
+    <select name="category" id="category">
+      <option value="none" selected disabled hidden>類別</option>
+      <option value="housing">家居物業</option>
+      <option value="transportation">交通出行</option>
+      <option value="entertainment">休閒娛樂</option>
+      <option value="food">餐飲食品</option>
+      <option value="other">其他</option>
+    </select>
+  </div>
+
+  <div class="total-container">
+    <span>總金額</span>
+    <div class="total-amount">
+      20000
+    </div>
+  </div>
+
+
+  <ul class="list-group">
+    {{#each expenses}}
+    <li class="list-group-item">{{this.name}} {{this.cost}} {{this.date}} {{this.category}} <a class="btn btn-success"
+        href="/expenses/edit/{{this._id}}">修改</a>
+      <a class="btn btn-danger" href="/expenses/delete/{{this._id}}">刪除</a>
+    </li>
+
+
+    {{/each}}
+  </ul>
+
+
+
+</div>
