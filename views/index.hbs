@@ -22,8 +22,8 @@
   <ul class="list-group">
     {{#each expenses}}
     <li class="list-group-item">{{this.name}} {{this.cost}} {{this.date}} {{this.category}} <a class="btn btn-success"
-        href="/expenses/edit/{{this._id}}">修改</a>
-      <a class="btn btn-danger" href="/expenses/delete/{{this._id}}">刪除</a>
+        href="/expenses/{{this._id}}">修改</a>
+      <a class="btn btn-danger" href="/expenses/{{this._id}}/">刪除</a>
     </li>
 
 

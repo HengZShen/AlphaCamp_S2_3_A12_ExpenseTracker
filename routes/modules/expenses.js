@@ -5,33 +5,38 @@ const checkDefault = require('../../public/javascripts/defaultSelector')
 const checkSelect = checkDefault.checkSelect()
 
 
-
+// new
 router.get('/new', (req, res) => {
 
   res.render('new')
 })
 
 router.post('/', (req, res) => {
-  const { name, date, category, cost } = req.body
-  // console.log(req.body)
-  Expense.create({ name, date, category, cost })
+
+
+  Expense.create(req.body)
     .then(() => res.redirect('/'))
     .catch(error => console.log(error))
 })
 
 
-router.get('/edit/:id', (req, res) => {
+// edit
+router.get('/:id', (req, res) => {
   Expense.findById(req.params.id)
     .lean()
     .then(expense => res.render('edit', { expense }))
 })
 
-// router.put('/', (req, res) => {
+router.put('/:id', (req, res) => {
 
-//   console.log(req.body)
+  Expense.findById(req.params.id)
+    .then(expense => {
+      Object.assign(expense, req.body)
+      expense.save()
+    }).then(() => res.redirect('/'))
+    .catch(error => console.log(error))
 
-//   res.redirect('/')
-// })
+})
 
 
 module.exports = router
