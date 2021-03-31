@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const Expense = require('../../models/Record')
+const Record = require('../../models/Record')
 
 
 
@@ -9,7 +9,7 @@ const Expense = require('../../models/Record')
 
 router.get('/', (req, res) => {
 
-  Expense.find()
+  Record.find()
     .lean()
     .then(expenses => res.render('index', { expenses }))
     .catch(error => console.log(error))

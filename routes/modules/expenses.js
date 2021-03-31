@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const Expense = require('../../models/Record')
+const Record = require('../../models/Record')
 const checkDefault = require('../../public/javascripts/defaultSelector')
 const checkSelect = checkDefault.checkSelect()
 
@@ -14,7 +14,7 @@ router.get('/new', (req, res) => {
 router.post('/', (req, res) => {
 
 
-  Expense.create(req.body)
+  Record.create(req.body)
     .then(() => res.redirect('/'))
     .catch(error => console.log(error))
 })
@@ -22,14 +22,14 @@ router.post('/', (req, res) => {
 
 // edit
 router.get('/:id', (req, res) => {
-  Expense.findById(req.params.id)
+  Record.findById(req.params.id)
     .lean()
     .then(expense => res.render('edit', { expense }))
 })
 
 router.put('/:id', (req, res) => {
 
-  Expense.findById(req.params.id)
+  Record.findById(req.params.id)
     .then(expense => {
       Object.assign(expense, req.body)
       expense.save()
@@ -41,7 +41,7 @@ router.put('/:id', (req, res) => {
 
 //delete 
 router.delete("/:id", (req, res) => {
-  Expense.findById(req.params.id)
+  Record.findById(req.params.id)
     .then(expense => expense.deleteOne())
     .then(() => res.redirect('/'))
     .catch(error => console.log(error))

@@ -2,33 +2,33 @@
   "sample": [
     {
       "name": "Burger King",
-      "cost": "150",
       "date": "2021-03-01",
-      "category": "food"
+      "category": "food",
+      "amount": "150"
     },
     {
       "name": "Spaghetti",
-      "cost": "200",
       "date": "2021-03-11",
-      "category": "food"
+      "category": "food",
+      "amount": "200"
     },
     {
       "name": "Movie Iron Man",
-      "cost": "300",
       "date": "2021-11-21",
-      "category": "entertainment"
+      "category": "entertainment",
+      "amount": "300"
     },
     {
       "name": "T-shirt",
-      "cost": "500",
       "date": "2021-02-09",
-      "category": "other"
+      "category": "other",
+      "amount": "500"
     },
     {
       "name": "rent",
-      "cost": "7000",
       "date": "2021/3/1",
-      "category": "housing"
+      "category": "housing",
+      "amount": "7000"
     }
   ]
 }
