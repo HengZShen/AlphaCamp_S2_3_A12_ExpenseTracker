@@ -3,12 +3,13 @@
   <div class="category-selector">
     <form action="/category" method="GET">
       <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
-          data-bs-toggle="dropdown" aria-expanded="false">
-          Dropdown button
+        <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          搜尋分類
         </button>
         <input type="text" id="category-type" name="category" style="display: none;">
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><button type=submit class="dropdown-item category-item" id="all">總消費</button></li>
           <li><button type=submit class="dropdown-item category-item" id="housing">家居物業</button></li>
           <li><button type=submit class="dropdown-item category-item" id="transportation">交通出行</button></li>
           <li><button type=submit class="dropdown-item category-item" id="entertainment">休閒娛樂</button></li>

@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&family=Roboto+Slab&display=swap');
+
+*{
+  font-family: 'Noto Sans TC' ,sans-serif;
+}
+
 .form-container, .expense-container {
   background-color: #a2a8aa;
   box-shadow:0px 0px 5px 0 rgb(128, 126, 126);
