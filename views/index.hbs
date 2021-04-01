@@ -1,11 +1,11 @@
-<div class="expense-container">
+<div class="expense-container mt-5">
 
   <div class="category-selector">
     <form action="/category" method="GET">
       <div class="dropdown">
-        <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-          aria-expanded="false">
-          搜尋分類
+        <button class="btn btn-danger dropdown-toggle category-toggle" type="button" id="dropdownMenuButton1"
+          data-bs-toggle="dropdown" aria-expanded="false">
+          {{#defaultText category}}{{/defaultText}}
         </button>
         <input type="text" id="category-type" name="category" style="display: none;">
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -20,10 +20,11 @@
     </form>
   </div>
 
+  <a href="/expenses/new"><i class="far fa-plus-square"></i></a>
+
   <div class="total-container">
     <span>總金額</span>
     <div id="totalAmount">
-      20000
     </div>
   </div>
 
@@ -41,9 +42,9 @@
       </div>
 
 
-      {{this.date}} <a class="btn btn-success" href="/expenses/{{this._id}}">修改</a>
+      {{this.date}} <a class="btn btn-success" href="/expenses/{{this._id}}"><i class="fas fa-edit"></i></a>
       <form action="/expenses/{{this._id}}?_method=DELETE" method="POST" style="display: inline;">
-        <button class="btn btn-danger">刪除</button>
+        <button class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
       </form>
     </li>
     {{/each}}

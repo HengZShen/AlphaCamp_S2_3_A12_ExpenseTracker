@@ -4,6 +4,12 @@
   font-family: 'Noto Sans TC' ,sans-serif;
 }
 
+.list-group {
+
+  min-width:600px;
+}
+
+
 .form-container, .expense-container {
   background-color: #a2a8aa;
   box-shadow:0px 0px 5px 0 rgb(128, 126, 126);
@@ -28,3 +34,5 @@
 .input-group input, .input-group select {
   min-width:200px  !important;
 }
+
+

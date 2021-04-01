@@ -8,8 +8,16 @@ const items = Array.prototype.slice.call(document.querySelectorAll('.item-amount
 // Not support IE
 // const items = Array.from(document.querySelectorAll('.item-amount'))
 
-const costs = items.map(item => item = Number(item.innerText))
+
+// no item
+if (items.length === 0) {
+  totalAmount.innerText = '趕緊消費一筆吧 空蕩蕩的可不好看呢!'
+}
+
+
+// cost
+const costArray = items.map(item => item = Number(item.innerText))
 
 const reducer = (accumulator, currentValue) => accumulator + currentValue;
 
-totalAmount.innerText = costs.reduce(reducer)
+totalAmount.innerText = costArray.reduce(reducer)
