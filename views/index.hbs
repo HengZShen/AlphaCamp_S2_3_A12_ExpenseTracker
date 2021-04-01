@@ -27,14 +27,20 @@
   </div>
 
 
+
+
   <ul class="list-group">
     {{#each expenses}}
     <li class="list-group-item">{{this.name}}
 
       <div class="item-amount">{{this.amount}}</div>
 
+      <div class="category-icon">
+        {{#checkIcon this.category}}{{/checkIcon}}
+      </div>
 
-      {{this.date}} {{this.category}} <a class="btn btn-success" href="/expenses/{{this._id}}">修改</a>
+
+      {{this.date}} <a class="btn btn-success" href="/expenses/{{this._id}}">修改</a>
       <form action="/expenses/{{this._id}}?_method=DELETE" method="POST" style="display: inline;">
         <button class="btn btn-danger">刪除</button>
       </form>

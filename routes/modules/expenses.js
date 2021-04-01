@@ -1,8 +1,9 @@
 const express = require('express')
 const router = express.Router()
 const Record = require('../../models/Record')
-const checkDefault = require('../../public/javascripts/defaultSelector')
+const checkDefault = require('../../public/javascripts/registerHelper/defaultSelector')
 const checkSelect = checkDefault.checkSelect()
+
 
 
 // new

@@ -1,7 +1,8 @@
 const express = require('express')
 const router = express.Router()
 const Record = require('../../models/Record')
-
+const checkFont = require('../../public/javascripts/registerHelper/fontawesome')
+const checkIcon = checkFont.checkIcon()
 
 
 
