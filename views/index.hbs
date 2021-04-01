@@ -31,24 +31,36 @@
 
 
 
-  <ul class="list-group">
+  <div class="list-group">
     {{#each expenses}}
-    <li class="list-group-item">{{this.name}}
-
-      <div class="item-amount">{{this.amount}}</div>
-
-      <div class="category-icon">
+    <div class="item-container row">
+      {{!-- icon --}}
+      <div class="icon-div col-2 d-flex justify-content-center align-items-center">
         {{#checkIcon this.category}}{{/checkIcon}}
       </div>
-
-
-      {{this.date}} <a class="btn btn-success" href="/expenses/{{this._id}}"><i class="fas fa-edit"></i></a>
-      <form action="/expenses/{{this._id}}?_method=DELETE" method="POST" style="display: inline;">
-        <button class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
-      </form>
-    </li>
+      {{!-- name & date --}}
+      <div class="name-date-div col-6">
+        <div class="name-div mb-2">
+          {{this.name}}
+        </div>
+        <div class="date-div">
+          {{this.date}}
+        </div>
+      </div>
+      {{!-- amount --}}
+      <div class="amount-div col-2 d-flex justify-content-center align-items-center">
+        {{this.amount}}
+      </div>
+      {{!-- edit & delete button --}}
+      <div class="edit-delete-div col-2 d-flex justify-content-around align-items-center">
+        <a href="/expenses/{{this._id}}"><i class="fas fa-edit"></i></a>
+        <form action="/expenses/{{this._id}}?_method=DELETE" method="POST" style="display: inline;">
+          <button type="submit" class="delete-btn"><i class="fas fa-trash-alt"></i></button>
+        </form>
+      </div>
+    </div>
     {{/each}}
-  </ul>
+  </div>
 
 
 

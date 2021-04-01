@@ -2,7 +2,7 @@ const totalAmount = document.querySelector('#totalAmount')
 
 // verbose but support all modern browsers  
 //  https://gomakethings.com/converting-a-nodelist-to-an-array-with-vanilla-javascript/
-const items = Array.prototype.slice.call(document.querySelectorAll('.item-amount'))
+const items = Array.prototype.slice.call(document.querySelectorAll('.amount-div'))
 
 
 // Not support IE

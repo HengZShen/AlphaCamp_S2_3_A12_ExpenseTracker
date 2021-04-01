@@ -4,10 +4,64 @@
   font-family: 'Noto Sans TC' ,sans-serif;
 }
 
-.list-group {
+/* index.hbs */
 
+.list-group {
   min-width:600px;
 }
+
+
+.item-container{
+  background-color:rgb(211, 204, 197);
+  border-bottom:0.5px solid grey;
+  border-left:0.5px solid grey;
+  border-right:0.5px solid grey;
+}
+
+.item-container:first-child{
+  border-top: 0.5px solid grey;
+}
+
+.item-container:nth-child(2n) {
+  background-color: rgb(253, 208, 141);
+}
+
+
+
+.icon-div {
+  font-size: 45px;
+  color:rgb(34, 95, 139);
+}
+
+.name-div {
+font-size:25px;
+}
+
+.amount-div {
+  font-size:20px;
+}
+
+.edit-delete-div{
+  font-size:22px;
+}
+
+.delete-btn {
+  color:red;
+  background-color: transparent;
+  border:0;
+  padding:0;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 .form-container, .expense-container {
