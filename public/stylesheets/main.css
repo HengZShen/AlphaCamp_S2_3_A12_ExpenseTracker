@@ -4,29 +4,28 @@
   font-family: 'Noto Sans TC' ,sans-serif;
 }
 
+
+
 /* index.hbs */
 
 .list-group {
   min-width:600px;
+
 }
 
 
 .item-container{
   background-color:rgb(247, 245, 244);
   box-shadow:0px 0px 5px 0 rgb(247, 245, 244);
-  border-bottom:0.5px solid grey;
-  border-left:0.5px solid grey;
-  border-right:0.5px solid grey;
+  border: 1px solid rgb(247, 245, 244);
   min-height:80px;
-}
-
-.item-container:first-child{
-  border-top: 0.5px solid grey;
+  border-radius: 10px;
 }
 
 .item-container:nth-child(2n) {
   background-color: rgb(255, 204, 128);
   box-shadow:0px 0px 5px 0 rgb(255, 204, 128);
+  border: 1px solid rgb(255, 204, 128);
 }
 
 .category-toggle {
@@ -99,9 +98,8 @@ font-size:25px;
 }
 
 
-
 .form-container {
-  background-color: #a2a8aa;
+  background-color: #d7e2e6;
   box-shadow:0px 0px 5px 0 rgb(128, 126, 126);
   border-radius:5px;
   width: fit-content  !important;
@@ -124,8 +122,14 @@ font-size:25px;
 
 }
 
-.input-group input, .input-group select {
-  min-width:200px  !important;
+input, select{
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
 }
+input, select {
+  width:200px;
+}
+
 
 
