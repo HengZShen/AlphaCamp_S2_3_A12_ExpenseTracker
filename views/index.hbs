@@ -1,36 +1,32 @@
 <div class="expense-container mt-5">
-
-  <div class="category-selector">
-    <form action="/category" method="GET">
-      <div class="dropdown">
-        <button class="btn btn-danger dropdown-toggle category-toggle" type="button" id="dropdownMenuButton1"
-          data-bs-toggle="dropdown" aria-expanded="false">
-          {{#defaultText category}}{{/defaultText}}
-        </button>
-        <input type="text" id="category-type" name="category" style="display: none;">
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-          <li><button type=submit class="dropdown-item category-item" id="all">總消費</button></li>
-          <li><button type=submit class="dropdown-item category-item" id="housing">家居物業</button></li>
-          <li><button type=submit class="dropdown-item category-item" id="transportation">交通出行</button></li>
-          <li><button type=submit class="dropdown-item category-item" id="entertainment">休閒娛樂</button></li>
-          <li><button type=submit class="dropdown-item category-item" id="food">餐飲食品</button></li>
-          <li><button type=submit class="dropdown-item category-item" id="other">其他</button></li>
-        </ul>
+  <div class="info-div row">
+    <div class="category-selector col-6">
+      <form action="/category" method="GET">
+        <div class="dropdown">
+          <button class="dropdown-toggle category-toggle" type="button" id="dropdownMenuButton1"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            {{#defaultText category}}{{/defaultText}}
+          </button>
+          <input type="text" id="category-type" name="category" style="display: none;">
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><button type=submit class="dropdown-item category-item" id="all">總消費</button></li>
+            <li><button type=submit class="dropdown-item category-item" id="housing">家居物業</button></li>
+            <li><button type=submit class="dropdown-item category-item" id="transportation">交通出行</button></li>
+            <li><button type=submit class="dropdown-item category-item" id="entertainment">休閒娛樂</button></li>
+            <li><button type=submit class="dropdown-item category-item" id="food">餐飲食品</button></li>
+            <li><button type=submit class="dropdown-item category-item" id="other">其他</button></li>
+          </ul>
+        </div>
+      </form>
+    </div>
+    <div class="create-div col-6 d-flex justify-content-end">
+      <a href="/expenses/new"><i class="far fa-plus-square"></i></a>
+    </div>
+    <div class="total-container col-12 d-flex mt-3 mb-3 justify-content-center">
+      <div id="totalAmount">
       </div>
-    </form>
-  </div>
-
-  <a href="/expenses/new"><i class="far fa-plus-square"></i></a>
-
-  <div class="total-container">
-    <span>總金額</span>
-    <div id="totalAmount">
     </div>
   </div>
-
-
-
-
   <div class="list-group">
     {{#each expenses}}
     <div class="item-container row">
@@ -61,9 +57,6 @@
     </div>
     {{/each}}
   </div>
-
-
-
 </div>
 
 

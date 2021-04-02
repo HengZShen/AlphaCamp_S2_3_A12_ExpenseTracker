@@ -20,4 +20,4 @@ const costArray = items.map(item => item = Number(item.innerText))
 
 const reducer = (accumulator, currentValue) => accumulator + currentValue;
 
-totalAmount.innerText = costArray.reduce(reducer)
+totalAmount.innerText = '總消費:  ' + String(costArray.reduce(reducer))
