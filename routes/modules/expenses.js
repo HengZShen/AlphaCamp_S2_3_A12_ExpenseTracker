@@ -26,6 +26,7 @@ router.get('/:id', (req, res) => {
   Record.findById(req.params.id)
     .lean()
     .then(expense => res.render('edit', { expense }))
+    .catch(error => console.log(error))
 })
 
 router.put('/:id', (req, res) => {
