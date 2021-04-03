@@ -6,6 +6,7 @@ mongoose.connect(MONGODB_URL, { useNewUrlParser: true, useUnifiedTopology: true 
 const db = mongoose.connection
 
 
+
 db.on('error', () => {
   console.log('mongodb error')
 })
