@@ -5,7 +5,6 @@ const defaultToggle = require('../../public/javascripts/registerHelper/defaultTo
 const defaultText = defaultToggle.defaultText()
 
 
-
 router.get('/', (req, res) => {
 
   const { category } = req.query

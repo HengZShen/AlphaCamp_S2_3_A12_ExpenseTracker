@@ -2,9 +2,7 @@ const express = require('express')
 const PORT = process.env.PORT || 3000
 const app = express()
 
-
-
-// static files
+// static filess
 app.use(express.static('public'))
 
 // handlebars
